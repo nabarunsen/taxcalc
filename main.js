@@ -21,7 +21,8 @@ var mongoUser =  process.env.MONGODB_USER,
 mongoURL += mongoUser + ':' + mongoPassword + '@';
 mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
 
-mongoose.connect('mongoURL',{useMongoClient:true});
+//mongoose.connect(mongoURL);
+mongoose.connect('mongodb://localhost/taxcalcdb',{useMongoClient:true})
 
 var Transaction = require('./models/transaction');
 
