@@ -21,7 +21,7 @@ var mongoUser =  process.env.MONGODB_USER,
 mongoURL += mongoUser + ':' + mongoPassword + '@';
 mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
 
-mongoose.connect(mongoURL);
+mongoose.connect('mongoURL',{useMongoClient:true});
 
 var Transaction = require('./models/transaction');
 
