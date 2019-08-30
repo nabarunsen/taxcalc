@@ -22,7 +22,7 @@ mongoURL += mongoUser + ':' + mongoPassword + '@';
 mongoURL += mongoHost + ':' +  mongoPort + '/' + mongoDatabase;
 
 //mongoose.connect(mongoURL);
-mongoose.connect('mongodb://localhost/taxcalcdb',{useMongoClient:true})
+mongoose.connect('mongodb://localhost/taxcalcdb')
 
 var Transaction = require('./models/transaction');
 
